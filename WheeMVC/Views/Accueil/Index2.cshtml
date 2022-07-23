@@ -1,0 +1,142 @@
+﻿@model IEnumerable<WheeMVC.Models.ListViewModel>
+
+@{
+    ViewBag.Title = "Index2";
+    Layout = "~/Views/_LayoutPage3.cshtml";
+}
+
+<h2>Index2</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenomP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mot_de_passe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.img)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imgP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nbpassager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pointdepart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pointarrive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datecov)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.heuredepart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_annonce)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tarif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.textbtn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenomP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mot_de_passe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.img)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imgP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nbpassager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pointdepart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pointarrive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datecov)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.heuredepart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_annonce)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tarif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.textbtn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

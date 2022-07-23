@@ -1,0 +1,89 @@
+﻿@using WheeMVC.Models
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LayoutPage2.cshtml";
+}
+
+<form id="form1" action="/Login/mLog" method="post">
+
+    <main>
+        <div class="container">
+
+            <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                            <div class="d-flex justify-content-center py-4">
+                                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                                    <div class="logo-container">
+                                        <img src="~/tools/img/logo2.png" alt="logo" class="logo nonTransparent" />
+                                    </div>
+
+
+                                </a>
+                            </div>
+
+                            <div class="card mb-3">
+
+                                <div class="card-body">
+
+                                    <div class="pt-4 pb-2 ">
+                                        <h5 class="card-title text-center pb-0 fs-4">Se connecter</h5>
+
+                                    </div>
+
+
+
+
+                                    <div class="col-12 email">
+                                        <label for="yourUsername" class="form-label">Email</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend"></span>
+                                            <input ID="yourUsername" name="mail" class="form-control" required="required" type="text" />
+
+                                            <div class="invalid-feedback">S'il vous plaît, entrez un Email valide.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mdp">
+                                        <label for="yourPassword" class="form-label">Mot de passe</label>
+                                        <input ID="yourPassword" name="mdp" class="form-control pwd-form" runat="server" TextMode="Password" required="required" type="Password" />
+
+                                        <div class="invalid-feedback">S'il vous plaît saisissez votre mot de passe</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="rememberMe" />
+                                            <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+
+                                        <Button runat="server" class="btn btn-primary w-100 btn-connect" type="submit" @*href="Accueil.html"*@>Se connecter</Button>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="small mb-0 text-bas">Vous n'avez pas encore de compte? <br /><a href="Inscription.html" class="text-bas">Créer un compte</a></p>
+                                    </div>
+                                    <input ID="TextBoxMessage" runat="server" Class="message" type="text" />
+
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main><!-- End #main -->
+
+</form>
+

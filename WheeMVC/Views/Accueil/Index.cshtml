@@ -9,7 +9,7 @@
     Layout = "~/Views/_LayoutPage3.cshtml";
 }
 
-<form id="form1" method="post">
+
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
@@ -146,140 +146,142 @@
             <h1>Où voulez-vous aller ?</h1>
         </div><!-- End Page Title -->
         <!-- Add Section -->
-        <section class="section" id="Add">
-            <div class="row">
+        <form action="Index" method="post">
+            <section class="section" id="Add">
+                <div class="row">
 
-                <!-- Départ -->
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Lieu de départ</h5>
-                            <div class="search-bar">
-                                <div class="search-form d-flex align-items-center" method="POST" action="#">
-                                    <input name="pointdepart" type="text" class="form-control" />
-
-                                </div>
-                            </div><!-- End Search Bar -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Arriver -->
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Lieu d'arrivée</h5>
-                            <div class="search-bar">
-                                <div class="search-form d-flex align-items-center" method="POST" action="#">
-                                    <input name="point arrive" type="text" class="form-control" />
-
-
-                                </div>
-                            </div><!-- End Search Bar -->
-                        </div>
-                    </div>
-                </div>
-                <!-- Date -->
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Date de départ</h5>
-                            <div class="search-bar">
-                                <div class="search-form d-flex align-items-center" method="POST" action="#">
-                                    <input id="datecov" type="date" class="form-control" />
-
-                                </div>
-                            </div><!-- End Search Bar -->
-                        </div>
-                    </div>
-                </div>
-                <!-- Heure -->
-                <div class="col-lg-3">
-                    <div class="card mx-auto">
-                        <div class="card-body">
-                            <h5 class="card-title">Heure de départ</h5>
-                            <div class="search-bar">
-                                <div class="search-form d-flex align-items-center" method="POST" action="#">
-                                    <input id="heuredepart" type="time" class="form-control" />
-                                    <button ID="SubmitBtn" Class="btn btn-small btn-primary " type="submit">Rechercher</button>
-                                </div>
-                            </div><!-- End Search Bar -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- Add Section -->
-        <section class="section" id="List">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-
-                    <!-- Table with hoverable rows -->
-
-
-
-                    @foreach (ListViewModel item in Model)
-                    {
-                        if (item.imgP != null)
-                        {
-                            break;
-                        }
+                    <!-- Départ -->
+                    <div class="col-lg-3">
                         <div class="card">
-
-                            <div class="card-header " id="myDiv">
-
-                                @item.type_annonce
-
-                            </div>
-
                             <div class="card-body">
-                                <div class="container text-center">
-                                    <div class="row">
-                                        <div class="col-sm ">
-                                            <br />
+                                <h5 class="card-title">Lieu de départ</h5>
+                                <div class="search-bar">
+                                    <div class="search-form d-flex align-items-center">
+                                        <input ID="yourUsername" name="depart" class="form-control" required="required" type="text" />
 
-                                            <img src=@item.img height="90" width="90" class="rounded-circle" />
+                                    </div>
+                                </div><!-- End Search Bar -->
+                            </div>
+                        </div>
+                    </div>
 
-
-                                            <h4 class="card-title text-center">
-                                                <i class="bi bi-star"></i>
-                                                <i class="bi bi-star"></i>
-                                                <i class="bi bi-star"></i>
-                                                <i class="bi bi-star"></i>
-                                                <i class="bi bi-star"></i>
-                                            </h4>
-                                        </div>
-                                        <div class="col-sm">
-
-                                            <h4 class="card-title">@item.pointdepart<span>-</span>@item.pointarrive</h4>
-                                            <H5 class="card-text">Date:@item.datecov; Heure de départ:@item.heuredepart</H5>
-                                            <br />
-                                            <Button id="ButtonAnnonce" href="#" class="btn btn-primary ">@item.textbtn</Button>
+                    <!-- Arriver -->
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Lieu d'arrivée</h5>
+                                <div class="search-bar">
+                                    <div class="search-form d-flex align-items-center">
+                                        <input ID="yourUsername" name="arriver" class="form-control" required="required" type="text" />
 
 
+                                    </div>
+                                </div><!-- End Search Bar -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Date -->
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Date de départ</h5>
+                                <div class="search-bar">
+                                    <div class="search-form d-flex align-items-center" method="POST" action="#">
+                                        <input id="datecov" type="date" class="form-control" />
+
+                                    </div>
+                                </div><!-- End Search Bar -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Heure -->
+                    <div class="col-lg-3">
+                        <div class="card mx-auto">
+                            <div class="card-body">
+                                <h5 class="card-title">Heure de départ</h5>
+                                <div class="search-bar">
+                                    <div class="search-form d-flex align-items-center" method="POST" action="#">
+                                        <input id="heuredepart" type="time" class="form-control" />
+                                        <Button runat="server" class="btn btn-primary w-100 btn-connect" type="submit" @*href="Accueil.html"*@>rechercher</Button>
+                                    </div>
+                                </div><!-- End Search Bar -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </form>
+            <!-- Add Section -->
+            <section class="section" id="List">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+
+                        <!-- Table with hoverable rows -->
+
+
+
+                        @foreach (ListViewModel item in Model)
+                        {
+                            if (item.imgP != null)
+                            {
+                                break;
+                            }
+                            <div class="card">
+
+                                <div class="card-header " id="myDiv">
+
+                                    @item.type_annonce
+
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="container text-center">
+                                        <div class="row">
+                                            <div class="col-sm ">
+                                                <br />
+
+                                                <img src=@item.img height="90" width="90" class="rounded-circle" />
+
+
+                                                <h4 class="card-title text-center">
+                                                    <i class="bi bi-star"></i>
+                                                    <i class="bi bi-star"></i>
+                                                    <i class="bi bi-star"></i>
+                                                    <i class="bi bi-star"></i>
+                                                    <i class="bi bi-star"></i>
+                                                </h4>
+                                            </div>
+                                            <div class="col-sm">
+
+                                                <h4 class="card-title">@item.pointdepart<span>-</span>@item.pointarrive</h4>
+                                                <H5 class="card-text">Date:@item.datecov; Heure de départ:@item.heuredepart</H5>
+                                                <br />
+                                                <Button id="ButtonAnnonce" href="#" class="btn btn-primary ">@item.textbtn</Button>
+
+
+
+                                            </div>
 
                                         </div>
 
                                     </div>
-
                                 </div>
+
+                                <div class="card-footer text-muted">
+                                    2 days ago
+                                </div>
+
                             </div>
 
-                            <div class="card-footer text-muted">
-                                2 days ago
-                            </div>
-
-                        </div>
-
-                    }
+                        }
 
 
 
-                    <!-- End Table with hoverable rows -->
+                        <!-- End Table with hoverable rows -->
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
-</form>
+            </section>
+</main>
+

@@ -10,14 +10,10 @@ namespace WheeMVC.Models
     {
         [Display(Name="Nom")]
         public string nom { get; set; }
-        [Display(Name = "NomP")]
-
-        public string nomP { get; set; }
+        
         [Display(Name = "Prenom")]
         public string prenom { get; set; }
-        [Display(Name = "prenomP")]
-
-        public string prenomP { get; set; }
+        
         [Display(Name = "Mail")]
         public string mail { get; set; }
         [Display(Name = "Genre")]
